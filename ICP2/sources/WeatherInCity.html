@@ -1,0 +1,142 @@
+<html>
+<head>
+    <style>
+        .weatherModule {
+            background: #f2f2f2;
+            height: 150px;
+            width: 250px;
+            border: 1px dashed #ccc;
+            padding: 1em;
+        }
+        #customers {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #customers td, #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+        #customers tr:hover {background-color: #ddd;}
+
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .button1 {padding: 14px 40px;}
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js" type="application/javascript"></script>
+</head>
+<body>
+<div ng-app="weather" ng-controller="weatherctrl">
+    <div class="row">
+        <input type="text" placeholder="State"  ng-model="startlocation" id="startlocation"/>
+        <input type="text" placeholder="City Name"  ng-model="endlocation" id="endlocation" />
+        <button id="btn" ng-click="getWeather()" class="button button1"> Show Weather </button>
+        <br/></br>
+    </div>
+    <br/>
+    <br/>
+
+    <table id="customers" class="weatherModule">
+        <tr>
+            <th>Hours</th>
+            <th>Temperature</th>
+            <th>Condition</th>
+            <th>Icon</th>
+        </tr>
+        <tr>
+            <td> {{currentHours[0]}} </td>
+            <td> {{currentTemp[0]}} </td>
+            <td>{{currentCon[0]}}</td>
+            <td><img src={{currentIcon[0]}}></td>
+        </tr>
+        <tr>
+            <td> {{currentHours[1]}} </td>
+            <td> {{currentTemp[1]}} </td>
+            <td>{{currentCon[1]}}</td>
+            <td><img src={{currentIcon[1]}}></td>
+        </tr>
+        <tr>
+            <td> {{currentHours[2]}} </td>
+            <td> {{currentTemp[2]}} </td>
+            <td>{{currentCon[2]}}</td>
+            <td><img src={{currentIcon[2]}}></td>
+        </tr>
+        <tr>
+            <td> {{currentHours[3]}} </td>
+            <td> {{currentTemp[3]}} </td>
+            <td>{{currentCon[3]}}</td>
+            <td><img src={{currentIcon[3]}}></td>
+        </tr>
+        <tr>
+            <td> {{currentHours[4]}} </td>
+            <td> {{currentTemp[4]}} </td>
+            <td>{{currentCon[4]}}</td>
+            <td><img src={{currentIcon[4]}}></td>
+        </tr>
+
+    </table>
+
+
+</div>
+    <div id="map-canvas" style="height: 400px;"></div>
+
+<script>
+    angular.module('weather',[])
+        .controller('weatherctrl', function($scope, $http) {
+            console.log("hi");
+
+            $scope.getWeather = function() {
+                var end = document.getElementById('endlocation').value;
+                var start = document.getElementById('startlocation').value;
+                $http.get("https://api.wunderground.com/api/36b799dc821d5836/hourly/q/"+start+"/"+end+"%20City.json").success(function(data) {
+
+                    temp=[];
+                    con=[];
+                    icon=[];
+                    hours=[];
+                    $scope.currentTemp=[];
+                    $scope.currentCon=[];
+                    $scope.currentIcon=[];
+                    $scope.currentHours=[];
+                    for(i=0;i<5;i++)
+                    {
+                        temp[i] = data.hourly_forecast[i].temp.english;
+                        con[i] = data.hourly_forecast[i].condition;
+                        icon[i] = data.hourly_forecast[i].icon_url;
+                        hours[i]=data.hourly_forecast[i].FCTTIME.hour;
+                    }
+                    $scope.currentTemp = temp;
+                    $scope.currentCon = con;
+                    $scope.currentIcon = icon;
+                    $scope.currentHours = hours;
+
+
+                })
+            }
+
+        });
+</script>
+</body>
+</html>
