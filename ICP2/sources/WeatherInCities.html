@@ -1,28 +1,19 @@
 <html>
 <head>
     <style>
-        .weatherModule {
-            background: #f2f2f2;
-            height: 150px;
-            width: 250px;
-            border: 1px dashed #ccc;
-            padding: 1em;
-        }
+
+        /* Styling for the HTML table is done  below*/
         #customers {
             font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
             border-collapse: collapse;
             width: 100%;
         }
-
         #customers td, #customers th {
             border: 1px solid #ddd;
             padding: 8px;
         }
-
         #customers tr:nth-child(even){background-color: #f2f2f2;}
-
         #customers tr:hover {background-color: #ddd;}
-
         #customers th {
             padding-top: 12px;
             padding-bottom: 12px;
@@ -31,6 +22,7 @@
             color: white;
         }
 
+        /* Styling for Submit button is done here */
         .button {
             background-color: #4CAF50; /* Green */
             border: none;
@@ -42,76 +34,78 @@
             margin: 4px 2px;
             cursor: pointer;
         }
-
         .button1 {padding: 14px 40px;}
     </style>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js" type="application/javascript"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js" type="application/javascript">
+        //Anjular JS 1.4.4 is being used in this file
+    </script>
 </head>
+
 <body>
+<!-Controller is being assaigned here so that binds with module with view->
 <div ng-app="weather" ng-controller="weatherctrl">
+    <!-This division includes all input boxes along with table->
     <div class="row">
+        <label for="fname">State</label>
         <input type="text" placeholder="State"  ng-model="startlocation" id="startlocation"/>
+        <label for="fname">City</label>
         <input type="text" placeholder="City Name"  ng-model="endlocation" id="endlocation" />
         <button id="btn" ng-click="getWeather()" class="button button1"> Show Weather </button>
         <br/></br>
     </div>
     <br/>
     <br/>
-
-    <table id="customers" class="weatherModule">
+    <!-HTML Table->
+    <table id="customers" class="table table-dark" >
         <tr>
             <th>Hours</th>
             <th>Temperature</th>
             <th>Condition</th>
-            <th>Icon</th>
         </tr>
         <tr>
             <td> {{currentHours[0]}} </td>
             <td> {{currentTemp[0]}} </td>
-            <td>{{currentCon[0]}}</td>
-            <td><img src={{currentIcon[0]}}></td>
+            <td>{{currentCon[0]}} <img src={{currentIcon[0]}}> </td>
         </tr>
         <tr>
             <td> {{currentHours[1]}} </td>
             <td> {{currentTemp[1]}} </td>
-            <td>{{currentCon[1]}}</td>
-            <td><img src={{currentIcon[1]}}></td>
+            <td>{{currentCon[1]}} <img src={{currentIcon[1]}}> </td>
         </tr>
         <tr>
             <td> {{currentHours[2]}} </td>
             <td> {{currentTemp[2]}} </td>
-            <td>{{currentCon[2]}}</td>
-            <td><img src={{currentIcon[2]}}></td>
+            <td>{{currentCon[2]}}  <img src={{currentIcon[2]}}> </td>
         </tr>
         <tr>
             <td> {{currentHours[3]}} </td>
             <td> {{currentTemp[3]}} </td>
-            <td>{{currentCon[3]}}</td>
-            <td><img src={{currentIcon[3]}}></td>
+            <td>{{currentCon[3]}}  <img src={{currentIcon[3]}}></td>
         </tr>
         <tr>
             <td> {{currentHours[4]}} </td>
             <td> {{currentTemp[4]}} </td>
-            <td>{{currentCon[4]}}</td>
-            <td><img src={{currentIcon[4]}}></td>
+            <td>{{currentCon[4]}} <img src={{currentIcon[4]}}> </td>
         </tr>
-
     </table>
-
-
 </div>
-    <div id="map-canvas" style="height: 400px;"></div>
-
+<div id="map-canvas" style="height: 400px;"></div>
 <script>
+    // Logic of all functionality will be written here using angular JS
+    // Controller binds the module and view here
     angular.module('weather',[])
         .controller('weatherctrl', function($scope, $http) {
             console.log("hi");
 
             $scope.getWeather = function() {
+                //Using ID Value from Input text is retrived here
                 var end = document.getElementById('endlocation').value;
                 var start = document.getElementById('startlocation').value;
+                // Using HTTP get request Json can be retrived from the http link.
                 $http.get("https://api.wunderground.com/api/36b799dc821d5836/hourly/q/"+start+"/"+end+"%20City.json").success(function(data) {
 
+                    //Initializing all the required variables.
                     temp=[];
                     con=[];
                     icon=[];
@@ -120,6 +114,8 @@
                     $scope.currentCon=[];
                     $scope.currentIcon=[];
                     $scope.currentHours=[];
+
+                    // Iterating in the loop and populating the array
                     for(i=0;i<5;i++)
                     {
                         temp[i] = data.hourly_forecast[i].temp.english;
@@ -127,6 +123,8 @@
                         icon[i] = data.hourly_forecast[i].icon_url;
                         hours[i]=data.hourly_forecast[i].FCTTIME.hour;
                     }
+
+                    //Here scope is the binding part between the HTML and controller an its done here.
                     $scope.currentTemp = temp;
                     $scope.currentCon = con;
                     $scope.currentIcon = icon;
