@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        input[type=text] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: none;
+            background-color: #3CBC8D;
+            color: white;
+        }
+        input[type=button], input[type=submit], input[type=reset] {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        body {
+            background-image: url("dish.PNG");
+            background-color: #cccccc;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js" type="application/javascript">
+        //Anjular JS 1.4.4 is being used in this file
+    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<div class="w3-container w3-teal">
+    <h1>Calorie Finder</h1>
+</div>
+<div ng-app="calorieInfo"  ng-controller='ctrl'>
+    <form>
+        <label for="fname" style="text-align:center;color:#3CBC8D;font-size:160%;">Enter Any Dish of your choice</label>
+        <input type="text" id="input" name="input"  ng-model="foo">
+        <input type="button" ng-click="getInfo()" value="Get Info" ng-disabled="foo == null">
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-sm-6" style="background-color:transparent;">
+                <p style="color:#3CBC8D;font-size:160%;text-align:center;">Serving weight in grams : {{TotalCalorie}}</p>
+                <br>
+            </div>
+            <div class="col-sm-6" style="background-color:transparent;">
+                <p style="color:#3CBC8D;font-size:160%;text-align:center;">Total Calories : {{Servingweight}}</p>
+            </div>
+        </div>
+    </form>
+</div>
+<script>
+    angular.module('calorieInfo',[]).controller('ctrl', function($scope, $http) {
+        $scope.getInfo = function () {
+            $http.get('https://api.nutritionix.com/v1_1/search/'+$scope.foo+'?results=0:1&fields=*&appId=2a19de89&appKey=5eb41166e105449887b4ad83bdfb3aa0')
+                .success(function(data) {
+                var servingweight= data.hits[0].fields.nf_serving_weight_grams;
+                var calorie= data.hits[0].fields.nf_calories;
+                var calorieFat= data.hits[0].fields.nf_calories_from_fat;
+                var totalCalorie=calorie + calorieFat;
+                $scope.TotalCalorie = totalCalorie;
+                $scope.Servingweight = servingweight;
+            });
+            var audio = new Audio();
+            audio.src ='https://stream.watsonplatform.net/text-to-speech/api/v1/synthesize?username=d6452362-3ff5-430d-8c64-ff9779f4888e&password=4KWHMVfhhzYE&text='+$scope.foo+'';
+            audio.play();
+        }
+    });
+</script>
+</body>
+</html>
