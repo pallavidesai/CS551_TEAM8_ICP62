@@ -1,0 +1,7 @@
+#Fri Sep 14 13:10:05 CDT 2018
+base.0=F\:\\MS\\1STSEm\\ase\\ico4\\TranslateApp\\TranslateApp\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_0c3d0627ac32e6982516bacd228c14628fdbc84b
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=F\:\\MS\\1STSEm\\ase\\ico4\\TranslateApp\\TranslateApp\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_011ca7e39287fc76a036b780192024a55bf15286\\classes.dex
+base.1=F\:\\MS\\1STSEm\\ase\\ico4\\TranslateApp\\TranslateApp\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_011ca7e39287fc76a036b780192024a55bf15286
+file.0=F\:\\MS\\1STSEm\\ase\\ico4\\TranslateApp\\TranslateApp\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_0c3d0627ac32e6982516bacd228c14628fdbc84b\\classes.dex

@@ -1,0 +1,58 @@
+[
+    {
+        "merged": "F:\\MS\\1STSEm\\ase\\ico4\\TranslateApp\\TranslateApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
+        "source": "C:\\Users\\Dell\\.android\\build-cache\\eeef78a13c560bd487d5392663515c345ae95275\\output\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "F:\\MS\\1STSEm\\ase\\ico4\\TranslateApp\\TranslateApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\Dell\\.android\\build-cache\\eeef78a13c560bd487d5392663515c345ae95275\\output\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "F:\\MS\\1STSEm\\ase\\ico4\\TranslateApp\\TranslateApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
+        "source": "C:\\Users\\Dell\\.android\\build-cache\\e8218a43c9d6de766acee9ba838bbdb520ab3b07\\output\\res\\anim\\design_snackbar_out.xml"
+    },
+    {
+        "merged": "F:\\MS\\1STSEm\\ase\\ico4\\TranslateApp\\TranslateApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\Dell\\.android\\build-cache\\eeef78a13c560bd487d5392663515c345ae95275\\output\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "F:\\MS\\1STSEm\\ase\\ico4\\TranslateApp\\TranslateApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_out.xml",
+        "source": "C:\\Users\\Dell\\.android\\build-cache\\e8218a43c9d6de766acee9ba838bbdb520ab3b07\\output\\res\\anim\\design_fab_out.xml"
+    },
+    {
+        "merged": "F:\\MS\\1STSEm\\ase\\ico4\\TranslateApp\\TranslateApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
+        "source": "C:\\Users\\Dell\\.android\\build-cache\\e8218a43c9d6de766acee9ba838bbdb520ab3b07\\output\\res\\anim\\design_snackbar_in.xml"
+    },
+    {
+        "merged": "F:\\MS\\1STSEm\\ase\\ico4\\TranslateApp\\TranslateApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_in.xml",
+        "source": "C:\\Users\\Dell\\.android\\build-cache\\e8218a43c9d6de766acee9ba838bbdb520ab3b07\\output\\res\\anim\\design_fab_in.xml"
+    },
+    {
+        "merged": "F:\\MS\\1STSEm\\ase\\ico4\\TranslateApp\\TranslateApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\Users\\Dell\\.android\\build-cache\\eeef78a13c560bd487d5392663515c345ae95275\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "F:\\MS\\1STSEm\\ase\\ico4\\TranslateApp\\TranslateApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\Dell\\.android\\build-cache\\eeef78a13c560bd487d5392663515c345ae95275\\output\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "F:\\MS\\1STSEm\\ase\\ico4\\TranslateApp\\TranslateApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\Dell\\.android\\build-cache\\eeef78a13c560bd487d5392663515c345ae95275\\output\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "F:\\MS\\1STSEm\\ase\\ico4\\TranslateApp\\TranslateApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\Dell\\.android\\build-cache\\eeef78a13c560bd487d5392663515c345ae95275\\output\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "F:\\MS\\1STSEm\\ase\\ico4\\TranslateApp\\TranslateApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\Dell\\.android\\build-cache\\eeef78a13c560bd487d5392663515c345ae95275\\output\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "F:\\MS\\1STSEm\\ase\\ico4\\TranslateApp\\TranslateApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\Dell\\.android\\build-cache\\eeef78a13c560bd487d5392663515c345ae95275\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "F:\\MS\\1STSEm\\ase\\ico4\\TranslateApp\\TranslateApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\Dell\\.android\\build-cache\\eeef78a13c560bd487d5392663515c345ae95275\\output\\res\\anim\\abc_slide_out_top.xml"
+    }
+]
