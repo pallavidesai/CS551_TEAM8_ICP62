@@ -66,10 +66,10 @@ public class MyMapsActivity extends FragmentActivity implements OnMapReadyCallba
             ActivityCompat.requestPermissions(MyMapsActivity.this,
                     new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
                     MY_PERMISSIONS_REQUEST_FINE_LOCATION);
-            //return;
         }
+		// Get the location using LocationManager
         location =manager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-
+		//Get lattitude and longitude value
         double latitude = location.getLatitude();
         double longitude = location.getLongitude();
 
