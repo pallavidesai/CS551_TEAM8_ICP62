@@ -9,7 +9,7 @@ app.get('/getPlace', function (req, res) {
         'venue': []
     };
 
-    request('https://api.foursquare.com/v2/venues/search?client_id=Q0ENF1YHFTNPJ31DCF13ALLENJW0P5MTH13T1SA0ZP1MUOCI&client_secret=ZH4CRZNEWBNTALAE3INIB5XG0QI12R4DT5HKAJLWKYE1LHOG&v=20160215&limit=5&near=Kansas&query=burger', function (error, response, body) {
+    request('https://kgsearch.googleapis.com/v1/entities:search?query=kansas&key=AIzaSyCvnpFKAcsp9bg94zysoNY7QLv-P3SghJ8&limit=1&indent=True', function (error, response, body) {
         //Check for error
         if(error){
             return console.log('Error:', error);
