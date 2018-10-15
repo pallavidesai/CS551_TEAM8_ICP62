@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="F:\MS\1STSEm\ase\ico4\TranslateApp\TranslateApp\app\src\main\shaders"/></dataSet><dataSet config="debug"><source path="F:\MS\1STSEm\ase\ico4\TranslateApp\TranslateApp\app\src\debug\shaders"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="C:\Users\Dell\Documents\GitHub\CS551_TEAM8_ICP62\ICP4\sources\TranslateApp\app\src\main\shaders"/></dataSet><dataSet config="debug"><source path="C:\Users\Dell\Documents\GitHub\CS551_TEAM8_ICP62\ICP4\sources\TranslateApp\app\src\debug\shaders"/></dataSet></merger>

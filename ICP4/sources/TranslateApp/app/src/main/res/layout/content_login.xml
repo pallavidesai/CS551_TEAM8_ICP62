@@ -48,7 +48,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Login"
+        android:text="Do not have a account? Register"
         android:id="@+id/lbl_Header"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"

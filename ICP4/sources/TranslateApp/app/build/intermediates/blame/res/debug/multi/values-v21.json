@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "F:\\MS\\1STSEm\\ase\\ico4\\TranslateApp\\TranslateApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v21\\values-v21.xml",
+        "outputFile": "C:\\Users\\Dell\\Documents\\GitHub\\CS551_TEAM8_ICP62\\ICP4\\sources\\TranslateApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v21\\values-v21.xml",
         "map": [
             {
                 "to": {
@@ -12,7 +12,7 @@
                     "endOffset": 351
                 },
                 "from": {
-                    "file": "F:\\MS\\1STSEm\\ase\\ico4\\TranslateApp\\TranslateApp\\app\\src\\main\\res\\values-v21\\styles.xml",
+                    "file": "C:\\Users\\Dell\\Documents\\GitHub\\CS551_TEAM8_ICP62\\ICP4\\sources\\TranslateApp\\app\\src\\main\\res\\values-v21\\styles.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,

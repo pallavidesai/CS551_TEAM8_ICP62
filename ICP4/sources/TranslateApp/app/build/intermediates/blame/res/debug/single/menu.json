@@ -1,10 +1,10 @@
 [
     {
-        "merged": "F:\\MS\\1STSEm\\ase\\ico4\\TranslateApp\\TranslateApp\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_logout.xml",
-        "source": "F:\\MS\\1STSEm\\ase\\ico4\\TranslateApp\\TranslateApp\\app\\src\\main\\res\\menu\\menu_logout.xml"
+        "merged": "C:\\Users\\Dell\\Documents\\GitHub\\CS551_TEAM8_ICP62\\ICP4\\sources\\TranslateApp\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_login.xml",
+        "source": "C:\\Users\\Dell\\Documents\\GitHub\\CS551_TEAM8_ICP62\\ICP4\\sources\\TranslateApp\\app\\src\\main\\res\\menu\\menu_login.xml"
     },
     {
-        "merged": "F:\\MS\\1STSEm\\ase\\ico4\\TranslateApp\\TranslateApp\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_login.xml",
-        "source": "F:\\MS\\1STSEm\\ase\\ico4\\TranslateApp\\TranslateApp\\app\\src\\main\\res\\menu\\menu_login.xml"
+        "merged": "C:\\Users\\Dell\\Documents\\GitHub\\CS551_TEAM8_ICP62\\ICP4\\sources\\TranslateApp\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_logout.xml",
+        "source": "C:\\Users\\Dell\\Documents\\GitHub\\CS551_TEAM8_ICP62\\ICP4\\sources\\TranslateApp\\app\\src\\main\\res\\menu\\menu_logout.xml"
     }
 ]
