@@ -8,7 +8,7 @@ angular.module('myApp', [])
             if (placeEntered != null && placeEntered != "") {
                     $http.get('http://127.0.0.1:8081/getData?searchkey='+placeEntered).then(function(data)
                         {
-                            alert(data.data);
+
                             var outputdata=data.data;
                             console.log("the length of the data is  :"+outputdata.length);
                             console.log("The values are:-"+JSON.stringify(outputdata) );
@@ -18,7 +18,7 @@ angular.module('myApp', [])
                             $scope.wiki = data.data.itemListElement[0].result.detailedDescription.url;
                             $scope.wikiheading = "Explore " + $scope.searchDestination + " wiki in the following link";
                             $scope.searchimage = data.data.itemListElement[0].result.image.contentUrl;
-                            alert($scope.searchimage);
+
                         },function(err)
                         {
                             alert("failed");

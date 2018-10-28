@@ -1,0 +1,14 @@
+{
+"name" : "ase example",
+"version" : "1.0.0",
+"description" : "",
+"scripts" : 
+{
+	"start" : "node server.js"
+},
+"dependencies" : {
+"express" : "4.16.0"
+},
+"author":"pallavi",
+"license" : "ISC"
+}
